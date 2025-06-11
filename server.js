@@ -23,6 +23,8 @@ app.use(rules);
 app.use(auth);    // Add auth middleware
 app.use(router);  // Add the router
 
-app.listen(8000, () => {
-  console.log('✅ JSON Server Auth running at http://localhost:8000');
+const PORT = process.env.PORT || 8000;
+
+app.listen(PORT, () => {
+  console.log(`✅ JSON Server Auth running on port ${PORT}`);
 });
